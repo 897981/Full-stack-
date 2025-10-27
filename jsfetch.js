@@ -15,15 +15,16 @@
 // .catch((err)=>{
 //     console.error("error:",err.message);
 // })
+
 const fi=async ()=>{
     try{
     const res= await fetch (url);
     const jsondata=await res.json();
     jsondata.users.forEach((data)=>{
         console.log(data.firstName);
+    
     })
 }
-
 catch(err){
     console.error(err.message);
 }
